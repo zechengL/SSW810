@@ -3,6 +3,7 @@
 
 import os
 import unittest
+import sqlite3
 from prettytable import PrettyTable
 from collections import defaultdict
 
