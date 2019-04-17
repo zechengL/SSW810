@@ -85,8 +85,6 @@ class Instructor:
  def summary(self):
         DB_FILE = 'D:/git/810/810_startup.db'
         db = sqlite3.connect(DB_FILE)
-        # for (k,v) in self.courses.items():
-        #     yield [self.cwid, self.name, self.dept, k, v]
         for row in db.execute('SELECT CWID, Name, Dept, Course, COUNT(*) as cnt FROM Instructors JOIN Grades ON Instructors.CWID = Grades.Instructor_CWID GROUP BY Course'):
             yield row
 
